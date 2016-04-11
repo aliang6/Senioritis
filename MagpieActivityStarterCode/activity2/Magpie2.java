@@ -1,3 +1,10 @@
+/*
+  Team Senioritis
+  APCS2-pd5
+  HW29
+  2016-04-11
+*/
+
 /**
  * A program to carry on conversations with a human user.
  * This is the initial version that:  
@@ -31,9 +38,25 @@ public class Magpie2
 	public String getResponse(String statement)
 	{
 		String response = "";
-		if (statement.indexOf("no") >= 0)
+		if (statement.trim().length() == 0)
+		{
+			response = "Say something, I'm giving up on you...";
+		}
+		else if (statement.indexOf("no") >= 0)
 		{
 			response = "Why so negative?";
+		}
+		else if (statement.indexOf("food") >= 0)
+		{
+			response = "I'm hungry.";
+		}
+		else if (statement.indexOf("day") >= 0)
+		{
+			response = "I had an OK day. How about you?";
+		}
+		else if (statement.indexOf("yes") >= 0)
+		{
+			response = "Why so positive?";
 		}
 		else if (statement.indexOf("mother") >= 0
 				|| statement.indexOf("father") >= 0
@@ -41,6 +64,16 @@ public class Magpie2
 				|| statement.indexOf("brother") >= 0)
 		{
 			response = "Tell me more about your family.";
+		}
+		else if (statement.indexOf("dog") >= 0
+				|| statement.indexOf("cat") >= 0)
+		{
+			response = "Tell me more about your pets.";
+		}
+		else if (statement.indexOf("Mr. Brown-Mykolyk") >= 0
+				|| statement.indexOf("Mr. Brown") >= 0)
+		{
+			response = "Wow! He seems like a real cool dude.";
 		}
 		else
 		{
@@ -55,7 +88,7 @@ public class Magpie2
 	 */
 	private String getRandomResponse()
 	{
-		final int NUMBER_OF_RESPONSES = 4;
+		final int NUMBER_OF_RESPONSES = 6;
 		double r = Math.random();
 		int whichResponse = (int)(r * NUMBER_OF_RESPONSES);
 		String response = "";
@@ -75,6 +108,14 @@ public class Magpie2
 		else if (whichResponse == 3)
 		{
 			response = "You don't say.";
+		}
+		else if (whichResponse == 4)
+		{
+			response = "You're so cool.";
+		}
+		else if (whichResponse == 5)
+		{
+			response = "You're boring me.";
 		}
 
 		return response;

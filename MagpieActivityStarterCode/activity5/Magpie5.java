@@ -1,3 +1,10 @@
+/*
+  Team Senioritis
+  APCS2-pd5
+  HW29
+  2016-04-11
+*/
+
 import java.util.Random;
 
 /**
@@ -284,7 +291,11 @@ public class Magpie5
 	private String [] randomResponses = {"Interesting, tell me more",
 			"Hmmm.",
 			"Do you really think so?",
-			"You don't say."
+			"You don't say.",
+			"Wow, that's amazing.",
+			"You're so funny!",
+			"You're such a bore...",
+			"You're my bestfriend!"
 	};
 	
 }
